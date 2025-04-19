@@ -19,6 +19,7 @@ export default function LoginForm() {
         }
     }, [authLoaded, isSignedIn, router]);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const handleSubmit = async (e: React.FormEvent) => {
         // e.preventDefault();
         setErrorMsg('');
@@ -36,6 +37,7 @@ export default function LoginForm() {
             } else {
                 console.log('Additional steps required:', result);
             }
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
             console.log('Login error:', err);
             setErrorMsg(err.errors?.[0]?.message || 'Login failed');
