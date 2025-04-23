@@ -5,5 +5,5 @@ import { NextResponse } from 'next/server';
 export default clerkMiddleware();
 
 export const config = {
-    matcher: ['/((?!api|_next|.*\\..*).*)'],
+    matcher: ['/((?!_next|.*\\..*).*)'],
 };
